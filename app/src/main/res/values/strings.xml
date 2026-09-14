@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BRAVIA Helper</string>
+    <string name="accessibility_desc">Telefon kumandası için fare, tıklama ve yazı girişini TV üzerinde uygular.</string>
+</resources>
