@@ -76,11 +76,11 @@ public class RemoteAccessibilityService extends AccessibilityService {
         while (running) {
             HttpURLConnection c = null;
             try {
-                URL u = new URL("https://ntfy.sh/" + TOPIC + "/json?since=now");
+                URL u = new URL("https://ntfy.sh/" + TOPIC + "/json");
                 c = (HttpURLConnection) u.openConnection();
                 c.setConnectTimeout(15000);
                 c.setReadTimeout(0);
-                c.setRequestProperty("User-Agent", "BRAVIA-Helper/1.0");
+                c.setRequestProperty("User-Agent", "BRAVIA-Helper/1.1");
                 BufferedReader br = new BufferedReader(new InputStreamReader(c.getInputStream(), StandardCharsets.UTF_8));
                 String line;
                 while (running && (line = br.readLine()) != null) {
